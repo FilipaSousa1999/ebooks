@@ -8,6 +8,7 @@ return new class extends Migration
 {
       /**
      * Run the migrations.
+     * teste commit
      *
      * @return void
      */
@@ -19,8 +20,7 @@ return new class extends Migration
             $table->integer('estatistica')->nullable();
             $table->year('ano');
             $table->string('ISBN');
-            $table->string('editor');
-           
+            $table->string('editor');   
         });
     }
 
