@@ -6,21 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-      /**
+    /**
      * Run the migrations.
-     * teste commit
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('livros', function (Blueprint $table) {
+        Schema::create('PDF', function (Blueprint $table) {
+            $table->integer('idPDF')->unique();
             $table->integer('id')->unique();
-            $table->string('nome')->nullable();
-            $table->integer('estatistica')->nullable();
-            $table->year('ano');
-            $table->string('ISBN');
-            $table->string('editor');   
+            $table->string('URL');
         });
     }
 
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('livros');
+        Schema::dropIfExists('PDF');
     }
 };
