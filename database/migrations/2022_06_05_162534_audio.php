@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected  $primaryKey ='idaudio';
     /**
      * Run the migrations.
      *
@@ -14,9 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('audio', function (Blueprint $table) {
-            $table->integer('idaudio')->unique();
-            $table->integer('id')->unique();
+            $table->integer('idaudio')->unsigned();
+            $table->integer('id_livro')->unsigned();
             $table->string('ficheiro_audio');
+            $table->primary(['idaudio']);
+            $table->foreign('id_livro')->references('id')->on('livros');
         });
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected  $primaryKey ='idALI';
     /**
      * Run the migrations.
      *
@@ -14,9 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ALI', function (Blueprint $table) {
-            $table->integer('idALI')->unique();
-            $table->integer('id')->unique();
+            $table->integer('idALI')->unsigned();
+            $table->integer('id_livro')->unsigned();
             $table->string('URL');
+            $table->primary(['idALI']);
+            $table->foreign('id_livro')->references('id')->on('livros');
         });
     }
 

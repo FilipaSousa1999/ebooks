@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected  $primaryKey ='idvencedores';
     /**
      * Run the migrations.
      *
@@ -14,9 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vencedores', function (Blueprint $table) {
-            $table->integer('idvencedores')->unique();
-            $table->integer('id')->unique();
+            $table->integer('idvencedores')->unsigned();
+            $table->integer('id_livro')->unsigned();
             $table->string('texto');
+            $table->primary(['idvencedores']);
+            $table->foreign('id_livro')->references('id')->on('livros');
         });
     }
 

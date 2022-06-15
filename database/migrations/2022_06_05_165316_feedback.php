@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected  $primaryKey ='idfeedback';
     /**
      * Run the migrations.
      *
@@ -14,9 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('feedback', function (Blueprint $table) {
-            $table->integer('idfeedback')->unique();
-            $table->integer('id')->unique();
+            $table->integer('idfeedback')->unsigned();
+            $table->integer('id_livro')->unsigned();
             $table->string('texto');
+            $table->primary(['idfeedback']);
+            $table->foreign('id_livro')->references('id')->on('livros');
         });
     }
 
