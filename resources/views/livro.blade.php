@@ -18,12 +18,12 @@
                                     <form method="POST" action="/livro">
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <!-- Dados necessários para o livro-->
-                                     <textarea name="content" class="form-control"></textarea> <br>
-                                     <textarea name="titlo" class="form-control"></textarea>
-                                     <textarea name="autor" class="form-control"></textarea>
-                                     <textarea name="ano" class="form-control"></textarea>
-
-                                     <button type="submit" class="btn btn-primary"> Add Note</button>
+                                     <label for="">Título</label> <input>  <br />
+                                     <label for="">Capa</label> <input> <br />
+                                     <label for="">Autor</label> <input> <br />
+                                     <label for="">Editor</label> <input> <br />
+                                     <label for="">Ano</label> <input> <br />
+                                     <button type="submit" class="btn btn-primary"> Submeter </button>
                                     </form>
                     
                                     </div>
