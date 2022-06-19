@@ -18,11 +18,12 @@
                                     <form method="POST" action="/livro">
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <!-- Dados necessários para o livro-->
-                                     <label for="">Título</label> <input>  <br />
-                                     <label for="">Capa</label> <input> <br />
-                                     <label for="">Autor</label> <input> <br />
-                                     <label for="">Editor</label> <input> <br />
-                                     <label for="">Ano</label> <input> <br />
+                                     <label for="">Título</label> <input type="text" name="titulo">   <br />
+                                     <label for="">Capa</label> <input  type="text" name="capa"> <br />
+                                     <label for="">Autor</label> <input  type="text" name="autor"> <br />
+                                     <label for="">Editor</label> <input type="text" name="editor"> <br />
+                                     <label for="">Ano</label> <input  type="number" name="ano"> <br />
+                                     <label for="">Vídeo</label> <input  type="text" name="video"> <br />
                                      <button type="submit" class="btn btn-primary"> Submeter </button>
                                     </form>
                     
