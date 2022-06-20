@@ -24,6 +24,10 @@
                                      <label for="">Editor</label> <input type="text" name="editor"> <br />
                                      <label for="">Ano</label> <input  type="number" name="ano"> <br />
                                      <label for="">Vídeo</label> <input  type="text" name="video"> <br />
+                                     <label for="">Áudio</label> <input  type="text" name="audio"> <br />
+                                     <label for="">PDF</label> <input  type="text" name="pdf"> <br />
+                                     <label for="">Prémios</label> <input  type="text" name="premios"> <br />
+                                     <label for="">Apoios</label> <input  type="text" name="capa"> <br />
                                      <button type="submit" class="btn btn-primary"> Submeter </button>
                                     </form>
                     
