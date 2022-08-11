@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class livro extends Model
 {
-    protected $table = 'livro';
+    protected $table = 'livros';
+    public $timestamps = false;
     use HasFactory;
 }

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\livro;
+use App\Models\autores;
 
-class LivroController extends Controller
+class AutorController extends Controller
 {
     //
     
@@ -17,18 +17,13 @@ class LivroController extends Controller
      */
     public function index()
     {
-        return view('livro');
+        return view('autores');
     }
     public function add(Request $request){
        // dd($request);
-       $livro = new livro;
-       $livro->id_pdf=1;
-       $livro->nome=$request->titulo;
-       $livro->estatistica=10;
-       $livro->ano=$request->ano;
-       $livro->ISBN="as";
-       $livro->editor=$request->editor;
-       $livro->save();
+       $autor = new autores;
+       $autor->nome=$request->nome;
+       $autor->save();
 
     }
 }

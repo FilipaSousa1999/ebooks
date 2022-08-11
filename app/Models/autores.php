@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class autores extends Model
 {
     protected $table = 'autores';
+    public $timestamps = false;
+
     use HasFactory;
 }

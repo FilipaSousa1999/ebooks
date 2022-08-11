@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('idautores')->unsigned();
             $table->string('descricao');
             $table->primary(['idtipo_autores']);
-            $table->foreign('idautores')->references('idautores')->on('autores');
+            $table->foreign('idautores')->references('id')->on('autores');
         });
     }
 

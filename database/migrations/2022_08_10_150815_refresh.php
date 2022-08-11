@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    protected  $primaryKey ='idautores';
     /**
      * Run the migrations.
      *
@@ -14,12 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('autores', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_livro')->unsigned();
-            $table->string('nome');
-      //      $table->foreign('id_livro')->references('id')->on('livros');
-       });
+        //
     }
 
     /**
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('autores');
+        //
     }
 };
