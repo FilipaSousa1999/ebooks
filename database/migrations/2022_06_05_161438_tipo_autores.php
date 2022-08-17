@@ -15,7 +15,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tipo_autores', function (Blueprint $table) {
-            $table->integer('idtipo_autores')->unsigned();
+            $table->increments('idtipo_autores');
             $table->integer('idautores')->unsigned();
             $table->string('descricao');
             $table->primary(['idtipo_autores']);

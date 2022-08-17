@@ -57,8 +57,106 @@
                             </div>
                         </div>
                 </div>
-
-
+                <h3>ALI</h3>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="panel panel-default">
+                    
+                                    <div class="panel-body">
+                    
+                                    <form method="POST" action="/livro">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                    <!-- Dados necessários para a ALI -->
+                                     <label for="">URL</label> <input class="form-control" type="text" name="URL">   <br />
+                                     <button type="submit" class="btn btn-primary"> Submeter </button>
+                                    </form>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <h3>ILUSTRACOES</h3>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="panel panel-default">
+                    
+                                    <div class="panel-body">
+                    
+                                    <form method="POST" action="/livro">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                    <!-- Dados necessários para as ilustracoes -->
+                                     <label for="">Ilustracao</label> <input class="form-control" type="text" name="ilustracao">   <br />
+                                     <button type="submit" class="btn btn-primary"> Submeter </button>
+                                    </form>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>   
+                <h3>TIPO DE AUTORES</h3>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="panel panel-default">
+                    
+                                    <div class="panel-body">
+                    
+                                    <form method="POST" action="/livro">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                    <!-- Dados necessários para as ilustracoes -->
+                                     <label for="">Descricao</label> <input class="form-control" type="text" name="descricao">   <br />
+                                     <button type="submit" class="btn btn-primary"> Submeter </button>
+                                    </form>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <h3>PDF</h3>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="panel panel-default">
+                    
+                                    <div class="panel-body">
+                    
+                                    <form method="POST" action="/livro">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                    <!-- Dados necessários para o PDF -->
+                                     <label for="">PDF</label> <input class="form-control" type="text" name="URL">   <br />
+                                     <button type="submit" class="btn btn-primary"> Submeter </button>
+                                    </form>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <h3>AUDIO</h3>
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="panel panel-default">
+                    
+                                    <div class="panel-body">
+                    
+                                    <form method="POST" action="/livro">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                    <!-- Dados necessários para as ilustracoes -->
+                                     <label for="">Audio</label> <input class="form-control" type="text" name="ficheiro_audio">   <br />
+                                     <button type="submit" class="btn btn-primary"> Submeter </button>
+                                    </form>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div> 
             </div>
         </div>
     </div>

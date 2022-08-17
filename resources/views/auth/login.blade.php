@@ -3,6 +3,9 @@
 @section('content')
 
 <h2><a href="livro">LIVRO</a></h2>
+<h2><a href="livro">LER LIVRO</a></h2>
+<h2><a href="livro">OUVIR AUDIO DO LIVRO</a></h2>
+<h2><a href="livro">VER PDF DO LIVRO</a></h
 
 <div class="container">
     <div class="row justify-content-center">

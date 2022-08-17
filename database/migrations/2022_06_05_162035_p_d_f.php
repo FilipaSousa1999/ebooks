@@ -17,8 +17,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pdf', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->integer('id_livro')->unsigned();
+            $table->increments('id');
+            $table->integer('id_livro')->unsigned()->nullable();
             $table->string('URL');
             $table->primary(['id']);
             $table->foreign('id_livro')->references('id')->on('livros');
