@@ -31,5 +31,13 @@ class LivroController extends Controller
        $livro->save();
 
     }
+    public function lerlivro(Request $request)
+    {
+        return view ('lerlivro');
+    }
+    public function verpdf(Request $request)
+    {
+        return view ('verpdf');
+    }
 }
 

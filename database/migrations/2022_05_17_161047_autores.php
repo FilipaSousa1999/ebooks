@@ -18,7 +18,7 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('id_livro')->unsigned()->nullable();
             $table->string('nome');
-            $table->foreign('id_livro')->references('id')->on('livros');
+          //  $table->foreign('id_livro')->references('id')->on('livros');
        });
     }
 
@@ -30,5 +30,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('autores');
+        Schema::dropConstrainedForeignId('id_livro');
+
     }
 };

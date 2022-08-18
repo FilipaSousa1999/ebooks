@@ -33,7 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="navbar-brand" ><a href="livro">LIVRO</a></li>
+                        <li class="navbar-brand" ><a href="lerlivro">LER LIVRO</a></li>
+                        <li class="navbar-brand" ><a href="autor">ADICIONAR AUTOR</a></li>
+                        <li class="navbar-brand" ><a href="ouviraudio">OUVIR AUDIO DO LIVRO</a></li>
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -21,9 +21,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/livro', [App\Http\Controllers\LivroController::class, 'index']);
+Route::get('/livro/{id}', [App\Http\Controllers\LivroController::class, 'verpdf']);
+Route::get('/lerlivro', [App\Http\Controllers\LivroController::class, 'lerlivro']);
+Route::get('/ouviraudio', [App\Http\Controllers\AudioController::class, 'ouviraudio']);
 Route::post('/livro', [App\Http\Controllers\LivroController::class, 'add']);
-Route::post('/autor', [App\Http\Controllers\LerLivroController::class, 'add']);
-Route::get('/livro', [App\Http\Controllers\OuvirAudioController::class, 'index']);
+Route::post('/autor', [App\Http\Controllers\AutorController::class, 'add']);
+Route::get('/autor', [App\Http\Controllers\AutorController::class, 'index']);
+//Route::get('/livro', [App\Http\Controllers\OuvirAudioController::class, 'index']);
 Route::get('/atividadesALI', [App\Http\Controllers\ALIController::class, 'index']);
 Route::post('/atividadesALI', [App\Http\Controllers\ALIController::class, 'add']);
 Route::get('/ilustracoes', [App\Http\Controllers\IlustracaoController::class, 'index']);

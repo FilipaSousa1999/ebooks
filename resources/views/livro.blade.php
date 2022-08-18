@@ -37,26 +37,7 @@
                         </div>
                 </div>
 
-                <h3>AUTORES</h3>
-                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
-                                <div class="panel panel-default">
-                    
-                                    <div class="panel-body">
-                    
-                                    <form method="POST" action="/autor">
-                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                    <!-- Dados necessários para o autor-->
-                                     <label for="">Nome</label> <input class="form-control" type="text" name="nome">   <br />
-                                     <button type="submit" class="btn btn-primary"> Submeter </button>
-                                    </form>
-                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
+              
                 <h3>ALI</h3>
                      <div class="container">
                         <div class="row">

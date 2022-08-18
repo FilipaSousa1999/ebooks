@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\livro;
 
-class LerLivroController extends Controller
+class AudioController extends Controller
 {
     //
     
@@ -25,8 +25,9 @@ class LerLivroController extends Controller
        $audio->idaudio=1;
        $audio->ficheiro_audio=$request->ficheiro_audio;
        $audio->save();
-
-
+    }
+    public function ouviraudio(Request $request){
+        return view ('ouviraudio');
     }
 }
 

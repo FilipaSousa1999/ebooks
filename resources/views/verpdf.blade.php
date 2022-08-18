@@ -7,9 +7,9 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-                     <h3>LER LIVRO</h3>
+                     <h3>LER PDF</h3>
 
-                     <a href="livro/1">VER PDF</a>
+                    
             </div>
          </div>
     </div>           

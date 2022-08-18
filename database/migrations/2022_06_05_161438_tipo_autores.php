@@ -15,10 +15,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tipo_autores', function (Blueprint $table) {
-            $table->increments('idtipo_autores');
+            $table->increments('id');
             $table->integer('idautores')->unsigned();
             $table->string('descricao');
-            $table->primary(['idtipo_autores']);
             $table->foreign('idautores')->references('id')->on('autores');
         });
     }
