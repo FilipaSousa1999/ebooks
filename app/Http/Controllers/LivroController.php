@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ilustracoes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\livro;
@@ -18,6 +19,7 @@ class LivroController extends Controller
     public function index()
     {
         return view('livro');
+        return view ('ilustracao');
     }
     public function add(Request $request){
        // dd($request);
@@ -28,6 +30,9 @@ class LivroController extends Controller
        $livro->ano=$request->ano;
        $livro->ISBN="as";
        $livro->editor=$request->editor;
+       $ilustracoes = new ilustracoes;
+       $ilustracoes->ilustracao=$request->ilustracao;
+       $ilustracoes->save();
        $livro->save();
 
     }

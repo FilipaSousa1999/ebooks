@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\livro;
 
-class LivroController extends Controller
+class AliController extends Controller
 {
     //
     
@@ -17,7 +17,7 @@ class LivroController extends Controller
      */
     public function index()
     {
-        return view('ali');
+        return view('atividadesALI');
     }
     public function add(Request $request){
        // dd($request);

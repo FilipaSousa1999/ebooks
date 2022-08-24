@@ -37,6 +37,7 @@
                         <li class="navbar-brand" ><a href="lerlivro">LER LIVRO</a></li>
                         <li class="navbar-brand" ><a href="autor">ADICIONAR AUTOR</a></li>
                         <li class="navbar-brand" ><a href="ouviraudio">OUVIR AUDIO DO LIVRO</a></li>
+                        <li class="navbar-brand" ><a href="atividadesALI">ATIVIDADES ALI </a></li>
                         
                     </ul>
 

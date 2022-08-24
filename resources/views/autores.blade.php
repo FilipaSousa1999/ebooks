@@ -18,6 +18,7 @@
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <!-- Dados necessários para o autor-->
                                      <label for="">Nome</label> <input class="form-control" type="text" name="nome">   <br />
+                                     <label for="">Tipo de Autor </label> <input class="form-control" type="text" name="descricao">   <br />
                                      <button type="submit" class="btn btn-primary"> Submeter </button>
                                     </form>
                     
