@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    protected  $primaryKey ='idnotas_introdutorias';
+    protected  $primaryKey ='id';
     /**
      * Run the migrations.
      *
@@ -15,10 +15,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('notas_introdutorias', function (Blueprint $table) {
-            $table->integer('idnotas_introdutorias')->unsigned();
-            $table->integer('id_livro')->unsigned();
+            $table->integer('id')->unsigned();
+            $table->unsignedBigInteger('id_livro')->unsigned();
             $table->string('texto');
-            $table->primary(['idnotas_introdutorias']);
+            $table->primary(['id']);
             $table->foreign('id_livro')->references('id')->on('livros');
         });
     }

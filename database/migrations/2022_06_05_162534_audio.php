@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('audio', function (Blueprint $table) {
             $table->integer('idaudio')->unsigned();
-            $table->integer('id_livro')->unsigned();
+            $table->unsignedBigInteger('id_livro')->unsigned();
             $table->string('ficheiro_audio');
             $table->primary(['idaudio']);
             $table->foreign('id_livro')->references('id')->on('livros');

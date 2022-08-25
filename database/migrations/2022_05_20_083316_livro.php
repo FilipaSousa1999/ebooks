@@ -16,17 +16,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('livros', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_pdf')->unsigned()->nullable();
-            $table->integer('id_autor')->unsigned()->nullable();
+            $table->unsignedBigInteger('id')->autoIncrement();
+            $table->integer('id_pdf')->unsigned();
             $table->string('nome')->nullable();
             $table->integer('estatistica')->nullable();
             $table->year('ano');
             $table->string('ISBN');
             $table->string('editor');   
-            $table->foreign('id_autor')->references('id')->on('autores');
-            //$table->primary(['id']);
-           // $table->foreign('id_pdf')->references('id')->on('pdf')->onDelete('cascade');
+
         });
     }
 

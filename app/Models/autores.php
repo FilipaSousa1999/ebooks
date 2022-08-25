@@ -11,4 +11,7 @@ class autores extends Model
     public $timestamps = false;
 
     use HasFactory;
+    public function livros(){
+        return $this->belongsToMany(livro::class);
+    }
 }

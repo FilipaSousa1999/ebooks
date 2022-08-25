@@ -15,10 +15,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('feedback', function (Blueprint $table) {
-            $table->integer('idfeedback')->unsigned();
-            $table->integer('id_livro')->unsigned();
+            $table->integer('id')->unsigned();
+            $table->unsignedBigInteger('id_livro')->unsigned();
             $table->string('texto');
-            $table->primary(['idfeedback']);
+            $table->primary(['id']);
             $table->foreign('id_livro')->references('id')->on('livros');
         });
     }

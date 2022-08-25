@@ -38,3 +38,7 @@ Route::get('/pdf', [App\Http\Controllers\PDFController::class, 'index']);
 Route::post('/pdf', [App\Http\Controllers\PDFController::class, 'add']);
 Route::get('/audio', [App\Http\Controllers\AudioController::class, 'index']);
 Route::post('/audio', [App\Http\Controllers\AudioController::class, 'add']);
+Route::get('/teste', [App\Http\Controllers\LivroController::class, 'teste']);
+Route::get('/teste/getAutoresLivro', [App\Http\Controllers\LivroController::class, 'testeAutLiv']);
+Route::get('/teste/getLivrosAutor', [App\Http\Controllers\LivroController::class, 'testeLivAut']);
+Route::get('/teste/addRandomLivro', [App\Http\Controllers\LivroController::class, 'addRandLivro']);

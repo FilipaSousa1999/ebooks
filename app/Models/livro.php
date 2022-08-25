@@ -10,4 +10,7 @@ class livro extends Model
     protected $table = 'livros';
     public $timestamps = false;
     use HasFactory;
+    public function autores(){
+        return $this->belongsToMany(autor::class);
+    }
 }
