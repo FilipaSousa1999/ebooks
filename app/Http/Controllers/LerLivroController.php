@@ -17,7 +17,8 @@ class LerLivroController extends Controller
      */
     public function index()
     {
-        return view('livro');
+        $livros=livro::all();
+        return view('lerlivro')->with('livros', $livros);
     }
     public function add(Request $request){
        // dd($request);

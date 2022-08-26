@@ -20,7 +20,6 @@
                                     <!-- Dados necessários para o livro-->
                                      <label for="">Título</label> <input class="form-control" type="text" name="titulo">   <br />
                                      <label for="">Capa</label> <input  class="form-control" type="text" name="capa"> <br />
-                                     <label for="">Autor</label> <input  class="form-control" type="text" name="autor"> <br />
                                      <label for="">Editor</label> <input class="form-control" type="text" name="editor"> <br />
                                      <label for="">Ano</label> <input  class="form-control" type="number" name="ano"> <br />
                                      <label for="">Vídeo</label> <input class="form-control" type="text" name="video"> <br />

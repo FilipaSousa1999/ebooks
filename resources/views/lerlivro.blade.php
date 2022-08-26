@@ -8,8 +8,9 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                      <h3>LER LIVRO</h3>
-
-                     <a href="livro/1">VER PDF</a>
+                     @foreach ($livros as $livro)
+                         <a href="/livro/{{$livro->id}}">{{$livro->nome}}</a>
+                     @endforeach
             </div>
          </div>
     </div>           

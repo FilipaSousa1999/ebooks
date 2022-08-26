@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\autores;
+use App\Models\autor;
 use App\Models\ilustracoes;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -21,13 +21,17 @@ class LivroController extends Controller
     public function index()
     {
         return view('livro');
+
     }
     public function lerlivro(Request $request)
      {
-         return view ('lerlivro');
+        $livros=livro::all();
+        return view('lerlivro')->with('livros', $livros);
      }
-     public function verpdf(Request $request)
+     public function verpdf($id)
      {
+        $livro = livro::find($id);
+        dd( $livro);
          return view ('verpdf');
      }
      public function add(Request $request){
@@ -65,7 +69,7 @@ class LivroController extends Controller
       }
  
      public function testeAutLiv(){
-         $livro = livro::find(2);
+         $livro = livro::find(1);
          $autores_livro = $livro->autores()->get();
          dd($autores_livro); // o objeto $autores_livro  é do tipo autor
      }
@@ -80,6 +84,7 @@ class LivroController extends Controller
          $autor = autor::find(1); //query para seleccionar o autor com id 1 na bd
          $autor2 = autor::find(2); //query para seleccionar autor com o id 2 na bd
  
+
  
  
          //criar um livro com valores aleatórios
