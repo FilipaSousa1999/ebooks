@@ -7,8 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-                     <h3>LER PDF</h3>
-
+                    {$livri->jjkl}}
                     
             </div>
          </div>
