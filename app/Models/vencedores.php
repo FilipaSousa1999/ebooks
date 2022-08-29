@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class vencedores extends Model
 {
-    protected $table = 'vencedores';
+    protected $table = 'vencedor';
+    public $timestamps = false;
     use HasFactory;
+    public function livros(){
+        return $this->belongsToMany(livro::class);
+}
 }

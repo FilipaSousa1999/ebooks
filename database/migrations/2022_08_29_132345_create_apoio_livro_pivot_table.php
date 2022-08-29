@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateLivroAliPivotTable extends Migration
+class CreateApoioLivroPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateLivroAliPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('ali_livro', function (Blueprint $table) {
-            $table->unsignedBigInteger('ali_id')->index();
-            $table->foreign('ali_id')->references('id')->on('ali');
+        Schema::create('apoio_livro', function (Blueprint $table) {
+            $table->unsignedBigInteger('apoio_id')->index();
+            $table->foreign('apoio_id')->references('id')->on('apoios');
             $table->unsignedBigInteger('livro_id')->index();
             $table->foreign('livro_id')->references('id')->on('livros')->onDelete('cascade');
-            $table->primary(['ali_id', 'livro_id']);
+            $table->primary(['apoio_id', 'livro_id']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateLivroAliPivotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ali_livro');
+        Schema::dropIfExists('apoio_livro');
     }
 }

@@ -14,12 +14,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ALI', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->unsignedBigInteger('id_livro')->unsigned();
+        Schema::create('ali', function (Blueprint $table) {
+            $table->unsignedinteger('id')->autoIncrement();
             $table->string('URL');
-            $table->primary(['id']);
-            $table->foreign('id_livro')->references('id')->on('livros');
         });
     }
 
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ALI');
+        Schema::dropIfExists('ali');
     }
 };

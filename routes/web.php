@@ -38,7 +38,12 @@ Route::get('/pdf', [App\Http\Controllers\PDFController::class, 'index']);
 Route::post('/pdf', [App\Http\Controllers\PDFController::class, 'add']);
 Route::get('/audio', [App\Http\Controllers\AudioController::class, 'index']);
 Route::post('/audio', [App\Http\Controllers\AudioController::class, 'add']);
-
+Route::get('/premios', [App\Http\Controllers\PremioController::class, 'index']);
+Route::post('/premios', [App\Http\Controllers\PremioController::class, 'add']);
+Route::get('/apoios', [App\Http\Controllers\ApoioController::class, 'index']);
+Route::post('/apoios', [App\Http\Controllers\ApoioController::class, 'add']);
+Route::get('/vencedores', [App\Http\Controllers\VencedorController::class, 'index']);
+Route::post('/vencedores', [App\Http\Controllers\VencedorController::class, 'add']);
 
 Route::get('/teste', [App\Http\Controllers\LivroController::class, 'teste']);
 

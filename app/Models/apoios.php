@@ -9,4 +9,8 @@ class apoios extends Model
 {
     protected $table = 'apoios';
     use HasFactory;
+    use HasFactory;
+    public function livros(){
+        return $this->belongsToMany(livro::class);
+}
 }

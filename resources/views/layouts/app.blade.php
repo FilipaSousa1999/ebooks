@@ -38,7 +38,10 @@
                         <li class="navbar-brand" ><a href="autor">ADICIONAR AUTOR</a></li>
                         <li class="navbar-brand" ><a href="ouviraudio">OUVIR AUDIO DO LIVRO</a></li>
                         <li class="navbar-brand" ><a href="atividadesALI">ATIVIDADES ALI </a></li>
-                        
+                        <li class="navbar-brand" ><a href="atividadesALI">ATIVIDADES ALI </a></li>
+                        <li class="navbar-brand" ><a href="apoios">APOIOS </a></li>
+                        <li class="navbar-brand" ><a href="premios">PRÉMIOS </a></li>
+                        <li class="navbar-brand" ><a href="vencedores">VENCEDORES </a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
