@@ -9,6 +9,7 @@ use App\Models\livro;
 class video extends Model
 {
     protected $table = 'video';
+    public $timestamps = false;
     use HasFactory;
 
     public function livro(){

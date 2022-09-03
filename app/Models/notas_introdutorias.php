@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class notas_introdutorias extends Model
 {
     protected $table = 'notas_introdutorias';
+    public $timestamps = false;
     use HasFactory;
 }

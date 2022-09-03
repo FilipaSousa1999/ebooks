@@ -9,6 +9,7 @@ use App\Models\livro;
 class pdf extends Model
 {
     protected $table = 'pdf';
+    public $timestamps = false;
     use HasFactory;
     
     public function livro(){

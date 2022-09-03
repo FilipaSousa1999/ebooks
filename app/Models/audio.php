@@ -9,6 +9,7 @@ use App\Models\livro;
 class audio extends Model
 {
     protected $table = 'audio';
+    public $timestamps = false;
     use HasFactory;
 
     public function livro(){

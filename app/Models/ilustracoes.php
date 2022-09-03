@@ -9,6 +9,7 @@ use App\Models\livro;
 class ilustracoes extends Model
 {
     protected $table = 'ilustracoes';
+    public $timestamps = false;
     use HasFactory;
     
     public function livro(){

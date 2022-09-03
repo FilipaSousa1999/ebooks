@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class tipo_autor extends Model
 {
     protected $table = 'tipo_autor';
+    public $timestamps = false;
     use HasFactory;
 }
