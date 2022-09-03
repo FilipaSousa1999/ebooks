@@ -17,10 +17,9 @@ return new class extends Migration
     {
         
         Schema::create('apoios', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->unsignedBigInteger('id_livro')->unsigned();
+            $table->unsignedBigInteger('id')->unsigned();
             $table->primary(['id']);
-            $table->foreign('id_livro')->references('id')->on('livros');
+
         });
     }
 

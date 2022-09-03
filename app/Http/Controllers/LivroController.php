@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\autor;
-use App\Models\ilustracoes;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Models\livro;
-
+use App\Models\video;
+use App\Models\capa;
+use App\Models\audio;
+use App\Models\ilustracoes;
+use App\Models\pdf;
 class LivroController extends Controller
 {
     //
@@ -35,6 +38,40 @@ class LivroController extends Controller
          return view ('verpdf');
      }
      public function add(Request $request){
+        $video = new video;
+        $capa = new capa;
+        $ilustracao = new ilustracoes;
+        $audio = new audio;
+        $pdf = new pdf;
+
+        if ($request->hasFile('video'))
+        {
+            $file = $request->file('video');
+            $originalname = $file->getClientOriginalName();
+            $path = $file->storeAs('public/', $originalname);
+            $video->ficheiro=$path;
+        }
+        if ($request->hasFile('capa'))
+        {
+            $file = $request->file('capa');
+            $originalname = $file->getClientOriginalName();
+            $path = $file->storeAs('public/', $originalname);
+            $capa->ficheiro_imagem=$path;
+        }
+        if ($request->hasFile('audio'))
+        {
+            $file = $request->file('audio');
+            $originalname = $file->getClientOriginalName();
+            $path = $file->storeAs('public/', $originalname);
+            $audio->ficheiro_audio=$path;
+        }
+        if ($request->hasFile('ilustracoes'))
+        {
+            $file = $request->file('ilustracoes');
+            $originalname = $file->getClientOriginalName();
+            $path = $file->storeAs('public/', $originalname);
+            $ilustracao->ilustracao=$path;
+        }
         // dd($request);
         $livro = new livro;
         $livro->id_pdf=1;
@@ -44,6 +81,11 @@ class LivroController extends Controller
         $livro->ISBN="as";
         $livro->editor=$request->editor;
         $livro->save();
+        $livro->capa()->save($capa);
+        $livro->video()->save($video);
+        $livro->pdf()->save($pdf);
+        $livro->ilustracoes()->save($ilustracao);
+        $livro->audio()->save($audio);
  
      }
  

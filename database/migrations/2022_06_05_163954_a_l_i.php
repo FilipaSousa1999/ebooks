@@ -15,8 +15,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ali', function (Blueprint $table) {
-            $table->unsignedinteger('id')->autoIncrement();
+            $table->unsignedBigInteger('id')->unsigned();
+            $table->primary(['id']);
             $table->string('URL');
+
         });
     }
 

@@ -15,19 +15,19 @@
                     
                                     <div class="panel-body">
                     
-                                    <form method="POST" action="/livro">
+                                    <form method="POST" action="/livro" enctype="multipart/form-data">  
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <!-- Dados necessários para o livro-->
                                      <label for="">Título</label> <input class="form-control" type="text" name="titulo">   <br />
-                                     <label for="">Capa</label> <input  class="form-control" type="text" name="capa"> <br />
+                                     <label for="">Capa</label> <input  class="form-control" type="file" name="capa"> <br />
                                      <label for="">Editor</label> <input class="form-control" type="text" name="editor"> <br />
                                      <label for="">Ano</label> <input  class="form-control" type="number" name="ano"> <br />
-                                     <label for="">Vídeo</label> <input class="form-control" type="text" name="video"> <br />
-                                     <label for="">Áudio</label> <input  class="form-control" type="text" name="audio"> <br />
-                                     <label for="">PDF</label> <input  class="form-control" type="text" name="pdf"> <br />
-                                     <label for="">Prémios</label> <input class="form-control" type="text" name="premios"> <br />
-                                     <label for="">Apoios</label> <input  class="form-control" type="text" name="capa"> <br />
-                                     <label for="">Ilustracoes</label> <input  class="form-control" type="text" name="ilustracao"> <br />
+                                     <label for="">Vídeo</label> <input class="form-control" type="file" name="video"> <br />
+                                     <label for="">Áudio</label> <input  class="form-control" type="file" name="audio"> <br />
+                                     <label for="">PDF</label> <input  class="form-control" type="file" name="pdf"> <br />
+                                   <!--  <label for="">Prémios</label> <input class="form-control" type="file" name="premios"> <br /> -->
+                                     <!--<label for="">Apoios</label> <input  class="form-control" type="file" name="capa"> <br /> -->
+                                     <label for="">Ilustracoes</label> <input  class="form-control" type="file" name="ilustracao"> <br />
                                      <button type="submit" class="btn btn-primary"> Submeter </button>
                                     </form>
                     

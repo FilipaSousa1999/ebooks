@@ -15,8 +15,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('premios', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            
+            $table->unsignedBigInteger('id')->index();
+          
         });
     }
 
@@ -27,6 +27,7 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('premios');
+
     }
 };

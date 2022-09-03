@@ -15,11 +15,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('video', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->unsignedBigInteger('id_livro')->unsigned();
+            $table->integer('id')->unsigned()->autoIncrement();
+            $table->unsignedBigInteger('livro_id')->unsigned()->nullable(false);
             $table->string('ficheiro');
-            $table->primary(['id']);
-            $table->foreign('id_livro')->references('id')->on('livros');
+            $table->foreign('livro_id')->references('id')->on('livros');
         });
     }
 

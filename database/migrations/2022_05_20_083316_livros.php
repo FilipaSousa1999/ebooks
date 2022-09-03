@@ -16,7 +16,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('livros', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->autoIncrement();
+            $table->unsignedBigInteger('id')->unsigned();
             $table->integer('id_pdf')->unsigned();
             $table->string('nome')->nullable();
             $table->integer('estatistica')->nullable();
@@ -34,6 +34,8 @@ return new class extends Migration
      */
     public function down()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('livros');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 };

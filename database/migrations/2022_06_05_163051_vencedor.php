@@ -15,11 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vencedor', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->unsignedBigInteger('id_livro')->unsigned();
+       
+            $table->unsignedBigInteger('id')->unsigned();
             $table->string('texto');
             $table->primary(['id']);
-            $table->foreign('id_livro')->references('id')->on('livros');
+
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vencedores');
+        Schema::dropIfExists('vencedor');
     }
 };
