@@ -17,11 +17,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pdf', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->unsignedBigInteger('id_livro')->unsigned();
+            $table->bigIncrements('id')->unsigned();
+            $table->unsignedBigInteger('livro_id')->unsigned();
             $table->string('URL');
-            $table->primary(['id']);
-            $table->foreign('id_livro')->references('id')->on('livros');
+            $table->foreign('livro_id')->references('id')->on('livros');
         });
     }
 

@@ -16,8 +16,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('livros', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->unsigned();
-            $table->integer('id_pdf')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->string('nome')->nullable();
             $table->integer('estatistica')->nullable();
             $table->year('ano');

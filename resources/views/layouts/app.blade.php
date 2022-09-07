@@ -33,15 +33,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="navbar-brand" ><a href="livro">LIVRO</a></li>
+                        
                         <li class="navbar-brand" ><a href="lerlivro">LER LIVRO</a></li>
-                        <li class="navbar-brand" ><a href="autor">ADICIONAR AUTOR</a></li>
                         <li class="navbar-brand" ><a href="ouviraudio">OUVIR AUDIO DO LIVRO</a></li>
-                        <li class="navbar-brand" ><a href="atividadesALI">ATIVIDADES ALI </a></li>
+                        @auth
+                        <li class="navbar-brand" ><a href="livro">ADICIONAR LIVRO</a></li>
+                        <li class="navbar-brand" ><a href="autor">ADICIONAR AUTOR</a></li>
                         <li class="navbar-brand" ><a href="atividadesALI">ATIVIDADES ALI </a></li>
                         <li class="navbar-brand" ><a href="apoios">APOIOS </a></li>
                         <li class="navbar-brand" ><a href="premios">PRÉMIOS </a></li>
                         <li class="navbar-brand" ><a href="vencedores">VENCEDORES </a></li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

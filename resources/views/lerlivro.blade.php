@@ -11,14 +11,14 @@
                      @foreach ($livros as $livro)
                          <a href="/livro/{{$livro->id}}">{{$livro->nome}}</a>
                      @endforeach
-                     @foreach ($livros as $livro)
+                     <!-- @foreach ($livros as $livro)
                         <h3> Livro {{$livro->nome}}</h3>
                         <ul>
                             <li>Nome:  {{$livro->nome}}</li>
                             <li> Ano:  {{$livro->ano}}</li>
                         
                         </ul>
-                    @endforeach
+                    @endforeach -->
             </div>
          </div>
     </div>           

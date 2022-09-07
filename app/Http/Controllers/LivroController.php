@@ -31,11 +31,17 @@ class LivroController extends Controller
         $livros=livro::all();
         return view('lerlivro')->with('livros', $livros);
      }
-     public function verpdf($id)
+     public function verlivro($id)
      {
         $livro = livro::find($id);
-        dd( $livro);
-         return view ('verpdf');
+        $ilustracoes = $livro->ilustracoes();
+        $audio = $livro->audio();
+        $pdf = $livro->pdf();
+        $capa=$livro->capa();
+        $video=$livro->video();
+        $autores=$livro->autores();
+        $data=array('autores'=>$autores, 'livro'=>$livro,'ilustracoes'=>$ilustracoes, 'audio'=>$audio, 'pdf'=>$pdf,'capa'=>$capa, 'video'=>$video);
+        return view ('detalhelivro',compact('data'));
      }
      public function add(Request $request){
         $video = new video;
@@ -44,6 +50,14 @@ class LivroController extends Controller
         $audio = new audio;
         $pdf = new pdf;
 
+
+        if ($request->hasFile('pdf'))
+        {
+            $file = $request->file('pdf');
+            $originalname = $file->getClientOriginalName();
+            $path = $file->storeAs('public/', $originalname);
+            $pdf->URL=$path;
+        }
         if ($request->hasFile('video'))
         {
             $file = $request->file('video');
@@ -74,7 +88,6 @@ class LivroController extends Controller
         }
         // dd($request);
         $livro = new livro;
-        $livro->id_pdf=1;
         $livro->nome=$request->titulo;
         $livro->estatistica=10;
         $livro->ano=$request->ano;

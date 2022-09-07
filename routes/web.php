@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/livro', [App\Http\Controllers\LivroController::class, 'index']);
-Route::get('/livro/{id}', [App\Http\Controllers\LivroController::class, 'verpdf']);
+Route::get('/livro/{id}', [App\Http\Controllers\LivroController::class, 'verlivro']);
 Route::get('/lerlivro', [App\Http\Controllers\LivroController::class, 'lerlivro']);
 Route::get('/ouviraudio', [App\Http\Controllers\AudioController::class, 'ouviraudio']);
 Route::post('/livro', [App\Http\Controllers\LivroController::class, 'add']);
